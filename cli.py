@@ -1,14 +1,14 @@
 import argparse
-from .optimization import optimize_fingerprint
+from .fingerprints import process_smiles
 
 def main():
-    parser = argparse.ArgumentParser(description="Process some fingerprints.")
+    parser = argparse.ArgumentParser(description="Process SMILES strings to generate fingerprints.")
     parser.add_argument('smiles', type=str, help='SMILES string to process')
     args = parser.parse_args()
     
-    # 假设有一个函数来处理 SMILES 字符串
-    result = optimize_fingerprint(args.smiles)
-    print(result)
+    # 处理 SMILES 字符串
+    fingerprint = process_smiles(args.smiles)
+    print("Generated Fingerprint:", fingerprint)
 
 if __name__ == '__main__':
     main()
