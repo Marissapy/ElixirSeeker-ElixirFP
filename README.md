@@ -9,7 +9,7 @@ ElixirFP is a Python library for generating and optimizing chemical fingerprints
 ### Remote Download
 You can clone the latest code repository via Git:
 ```bash
-  git clone https://github.com/Marissapy/ElixirSeeker-ElixirFP/ElixirFP.git
+  git clone https://github.com/Marissapy/ElixirSeeker-ElixirFP.git
   cd ElixirFP
 ```
 To install ElixirFP and its dependencies, ensure you have Python installed in your working environment and run the following commands:
