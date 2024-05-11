@@ -1,5 +1,5 @@
 import pandas as pd
-
+from elixirfp.optimization import optimize_fingerprint
 
 def test_optimize_fingerprint():
     df = pd.DataFrame({
