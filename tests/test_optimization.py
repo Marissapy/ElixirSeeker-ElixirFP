@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 def test_optimize_fingerprint():
     df = pd.DataFrame({
         'SMILES': ['CCO', 'CCC', 'CCN', 'CNC', 'NNC'],  # Increased to 5 samples
