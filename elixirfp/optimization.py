@@ -25,7 +25,7 @@ def optimize_fingerprint(df, fp_type, n_bits_range):
         'classifier__min_child_weight': sp_randint(1, 6),
         'classifier__gamma': uniform(0, 0.2)
         }
-        kf = KFold(n_splits=n_splits, shuffle=True, random_state=42)
+        kf = KFold(n_splits=2, shuffle=True, random_state=42)
         search = RandomizedSearchCV(model, param_grid, cv=kf, n_iter=10, scoring='neg_mean_squared_error', random_state=42)
         search.fit(X, y)
 
