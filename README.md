@@ -1,6 +1,9 @@
 # ElixirFP
 ElixirFP is a Python library for generating and optimizing chemical fingerprints of molecules. It supports multiple types of molecular fingerprints, including Morgan, Topological, and MACCS fingerprints, and offers a method for dimensionality reduction using Kernel Principal Component Analysis (KPCA).
-![image](https://github.com/Marissapy/ElixirSeeker-ElixirFP/assets/119525086/a76b7b12-868f-455e-b6b6-ff65549c4219)
+
+
+![image](https://github.com/Marissapy/ElixirSeeker-ElixirFP/assets/119525086/06f6c1c7-ae67-46df-9b15-819098cc5669)
+
 
 ## Features
 - Generate three types of molecular fingerprints: Morgan, Topological, and MACCS.
