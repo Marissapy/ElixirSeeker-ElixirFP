@@ -12,7 +12,6 @@ You can clone the latest code repository via Git:
   git clone https://github.com/Marissapy/ElixirSeeker-ElixirFP/ElixirFP.git
   cd ElixirFP
 ```
-### Dependency 
 To install ElixirFP and its dependencies, ensure you have Python installed in your working environment and run the following commands:
 ```bash
 pip install -r requirements.txt
