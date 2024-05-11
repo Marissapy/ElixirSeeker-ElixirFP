@@ -13,3 +13,7 @@ def generate_fingerprints(smiles, fp_type="Morgan", n_bits=2048):
     elif fp_type == "MACCS":
         return np.array(MACCSkeys.GenMACCSKeys(mol), dtype=int)
     return np.zeros(n_bits)
+
+def process_smiles(smiles, fp_type="Morgan", n_bits=2048):
+    fingerprint = generate_fingerprints(smiles, fp_type, n_bits)
+    return fingerprint
