@@ -1,7 +1,7 @@
 from sklearn.model_selection import KFold, RandomizedSearchCV
-import xgboost as xgb
 import numpy as np
 from .fingerprints import generate_fingerprints
+import xgboost as xgb  
 
 def optimize_fingerprint(df, fp_type, n_bits_range):
     best_score = float('inf')
@@ -14,7 +14,7 @@ def optimize_fingerprint(df, fp_type, n_bits_range):
         X = np.array(fingerprints)
         y = df['Value'].values
         
-        model = xgboost.XGBRegressor()
+        model = xgb.XGBRegressor()  # Correct usage of xgboost after import
         param_grid = {'n_estimators': [50, 100, 200], 'max_depth': [3, 5, 7], 'learning_rate': [0.01, 0.05, 0.1]}
         kf = KFold(n_splits=5, shuffle=True, random_state=42)
         search = RandomizedSearchCV(model, param_grid, cv=kf, n_iter=10, scoring='neg_mean_squared_error', random_state=42)
