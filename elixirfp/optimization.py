@@ -18,13 +18,7 @@ def optimize_fingerprint(df, fp_type, n_bits_range):
         y = df['Value'].values
         
         model = xgb.XGBRegressor()  # Correct usage of xgboost after import
-        param_grid = {
-        'classifier__learning_rate': uniform(0.01, 0.19),
-        'classifier__max_depth': sp_randint(3, 13),
-        'classifier__n_estimators': sp_randint(50, 501),
-        'classifier__min_child_weight': sp_randint(1, 6),
-        'classifier__gamma': uniform(0, 0.2)
-        }
+        param_grid = {'n_estimators': [50, 100, 200], 'max_depth': [3, 5, 7], 'learning_rate': [0.01, 0.05, 0.1]}
         kf = KFold(n_splits=2, shuffle=True, random_state=42)
         search = RandomizedSearchCV(model, param_grid, cv=kf, n_iter=10, scoring='neg_mean_squared_error', random_state=42)
         search.fit(X, y)
