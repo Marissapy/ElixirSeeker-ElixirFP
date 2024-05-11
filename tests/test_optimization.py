@@ -3,8 +3,8 @@ from elixirfp.optimization import optimize_fingerprint
 
 def test_optimize_fingerprint():
     df = pd.DataFrame({
-        'SMILES': ['CCO', 'CCC', 'CCN', 'CNC', 'NNC'],  # Increased to 5 samples
-        'Value': [1.2, 0.5, 1.8, 2.1, 0.9]
+        'SMILES': ['CCC', 'CCC', 'CCC','CCC', 'CCC', 'CCC','CCC', 'CCC', 'CCC', 'CNC', 'CNC', 'CNC', 'CNC', 'CNC', 'CNC', 'CNC', 'CNC'],  # Increased to 5 samples
+        'Value': [1.2, 1.2, 1.2,1.2, 1.2, 1.2,1.2, 1.2, 1.2, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]
     })
     # Reduce the number of splits to match the number of samples
     best_n_bits, best_params, best_score, best_importances = optimize_fingerprint(df, "Morgan", (8, 1024))  # Using 3 splits
