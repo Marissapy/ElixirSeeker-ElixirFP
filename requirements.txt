@@ -1,0 +1,5 @@
+rdkit
+scikit-learn
+xgboost
+numpy
+pandas
