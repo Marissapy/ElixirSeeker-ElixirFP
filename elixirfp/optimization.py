@@ -3,6 +3,8 @@ from sklearn.model_selection import StratifiedKFold
 import numpy as np
 from .fingerprints import generate_fingerprints
 import xgboost as xgb  
+from scipy.stats import randint as sp_randint
+from scipy.stats import uniform
 
 def optimize_fingerprint(df, fp_type, n_bits_range):
     best_score = float('inf')
